@@ -1,0 +1,35 @@
+<leds-title [text]="title" [size]="titleSize"></leds-title>
+<div class="row">
+  <div class="col-12 col-md-6 d-flex justify-content-around my-1 pl-1 pr-md-0 pr-1">
+    <ng-container
+      *ngFor="let led of leds.slice(0,4); let idx = index">
+      <leds-led
+        [color]="led.color"
+        [state]="led.state"
+        [index]="idx"
+        (changeState)="changeState($event)">
+      </leds-led>
+    </ng-container>
+  </div>
+  <div class="col-12 col-md-6 d-flex justify-content-around my-1 pl-md-0 pl-1 pr-1">
+    <ng-container *ngFor="let led of leds.slice(4); let idx = index">
+      <leds-led
+        [color]="led.color"
+        [state]="led.state"
+        [index]="idx + 4"
+        (changeState)="changeState($event)">
+      </leds-led>
+    </ng-container>
+  </div>
+</div>
+<div class="row" *ngIf="showDelayBar">
+  <div class="col-12 d-flex justify-content-between align-items-center my-3">
+    <div class="slider-label">Delay</div>
+    <div class="px-2 flex-fill">
+      <input type="range" [min]="delay.min" [max]="delay.max" [(ngModel)]="delay.value" [step]="delay.step" (change)="updateCurrentState()" />
+    </div>
+    <div class="slider-label">
+      {{ delay.value }} seconds
+    </div>
+  </div>
+</div>

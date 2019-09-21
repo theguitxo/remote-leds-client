@@ -1,0 +1,14 @@
+@import '../../mixins';
+
+@include out-border();
+
+fieldset {
+  border: solid $thin_border $black;
+  padding: $distance_min;
+  margin: $distance_min;
+  legend {
+    padding: $distance_min;
+    width: auto;
+    @include font-sizes();
+  }
+}

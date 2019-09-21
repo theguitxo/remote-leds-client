@@ -1,0 +1,8 @@
+@import '../../mixins';
+
+@include out-border();
+
+li.list-group-item {
+  cursor: pointer;
+}
+

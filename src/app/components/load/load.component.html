@@ -1,0 +1,30 @@
+<leds-title text="Load sequence" [size]="titleSize"></leds-title>
+<div class="row my-3" >
+  <div
+    *ngIf="!showMessageNoSequences()"
+    class="col-12">
+    <ul class="list-group">
+      <li
+        *ngFor="let key of sequencesKeys"
+        class="list-group-item"
+        [ngClass]=" {'active': sequencesListActiveItem(key)}"
+        (click)="selectSequence(key)">
+        {{ getStoredSequenceName(key) }}
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="row mt-4">
+  <div class="col d-flex justify-content-between align-items-start">
+    <div>
+      <button type="button" class="btn btn-primary m-1" [disabled]="disableLoad()" (click)="loadSequence()">
+        <fa-icon [icon]="faFolderOpen"></fa-icon> Load
+      </button>
+    </div>
+    <div>
+      <button type="button" class="btn btn-secondary m-1" (click)="backHome()">
+        <fa-icon [icon]="faUndoAlt"></fa-icon> Back
+      </button>
+    </div>
+  </div>
+</div>

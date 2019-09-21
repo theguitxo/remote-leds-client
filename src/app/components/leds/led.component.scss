@@ -1,0 +1,14 @@
+@import '../../mixins';
+
+.led {
+  border: solid 1px #000;
+  border-radius: 50%;
+  width:  2em;
+  height: 2em;
+  cursor: pointer;
+
+  @include led-color(blue, $blue-on, $blue-off);
+  @include led-color(red, $red-on, $red-off);
+  @include led-color(yellow, $yellow-on, $yellow-off);
+  @include led-color(green, $green-on, $green-off);
+}

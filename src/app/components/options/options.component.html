@@ -1,0 +1,44 @@
+<leds-title text="Options" [size]="titleSize"></leds-title>
+<div class="row">
+  <div class="col d-flex align-items-start">
+    <fieldset>
+      <legend>Steps</legend>
+      <button [disabled]="editingStep()" type="button" class="btn btn-primary m-1 d-block" (click)="addStep()">
+        <fa-icon [icon]="faPlusSquare"></fa-icon> Add step
+      </button>
+      <button [disabled]="!editingStep()" type="button" class="btn btn-primary m-1" (click)="saveStep()">
+        <fa-icon [icon]="faSave"></fa-icon> Save step
+      </button>
+      <button [disabled]="!editingStep()" type="button" class="btn btn-primary m-1" (click)="cancelEdit()">
+        <fa-icon [icon]="faUndo"></fa-icon> Cancel edit
+      </button>
+    </fieldset>
+    <fieldset>
+      <legend>Sequence</legend>
+      <div>
+        <button class="btn btn-primary m-1" (click)="newSequence()">
+          <fa-icon [icon]="faFile"></fa-icon> New
+        </button>
+      </div>
+      <div>
+        <button class="btn btn-primary m-1" [disabled]="disableSaveDemo()" (click)="saveDemo()">
+          <fa-icon [icon]="faSave"></fa-icon> Save
+        </button>
+        <button class="btn btn-primary m-1" [disabled]="disableSaveAsDemo()" (click)="saveAsDemo()">
+          <fa-icon [icon]="faSave"></fa-icon> Save As
+        </button>
+        <button class="btn btn-primary m-1" [disabled]="disableLoadDemo()" (click)="loadDemo()">
+          <fa-icon [icon]="faFolderOpen"></fa-icon> Load
+        </button>
+      </div>
+      <div>
+        <button class="btn btn-primary m-1" (click)="goToDemo()" [disabled]="disableDemoSendButtons()">
+          <fa-icon [icon]="faEye"></fa-icon> View demo
+        </button>
+        <button class="btn btn-primary m-1" (click)="sendSequence()" [disabled]="disableDemoSendButtons()">
+          <fa-icon [icon]="faShare"></fa-icon> Send sequence
+        </button>
+      </div>
+    </fieldset>
+  </div>
+</div>

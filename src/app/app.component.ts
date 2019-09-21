@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { TITLE } from './app.constants';
+
+const BIG = TITLE.SIZES.BIG;
 
 @Component({
   selector: 'leds-root',
@@ -6,5 +9,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'leds';
+
+  title: string;
+  titleSize: string;
+
+  constructor() {
+    this.title = 'Leds';
+    this.titleSize = BIG;
+  }
+
 }

@@ -1,0 +1,20 @@
+@import '../../mixins';
+
+@include out-border();
+
+.color {
+  width: 2em;
+  height: 2em;
+  border: solid 2px #000;
+
+  @include led-color(blue, $blue-on, $blue-off);
+  @include led-color(red, $red-on, $red-off);
+  @include led-color(yellow, $yellow-on, $yellow-off);
+  @include led-color(green, $green-on, $green-off);
+}
+
+.leds-displayer-container {
+  height: 50vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}

@@ -1,0 +1,33 @@
+<leds-title text="Save sequence" [size]="titleSize"></leds-title>
+<div class="row my-3" *ngIf="showMessageBox">
+  <div class="col-12">
+    <leds-messages-box
+      [type]="typeMessageBox"
+      [message]="messageMessageBox">
+    </leds-messages-box>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <form>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" name="name" [(ngModel)]="name" (keypress)="hideMessageBox()">
+      </div>
+    </form>
+  </div>
+</div>
+<div class="row mt-4">
+  <div class="col d-flex justify-content-between align-items-start">
+    <div>
+      <button type="button" class="btn btn-primary m-1" [disabled]="disableSave()" (click)="saveSequence()">
+        <fa-icon [icon]="faSave"></fa-icon> Save
+      </button>
+    </div>
+    <div>
+      <button type="button" class="btn btn-secondary m-1" (click)="backHome()">
+        <fa-icon [icon]="faUndoAlt"></fa-icon> Back
+      </button>
+    </div>
+  </div>
+</div>

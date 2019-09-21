@@ -1,0 +1,73 @@
+@import '../../mixins';
+
+@include out-border();
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 0;
+  padding-bottom: .25rem;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 0;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  border: 1px solid black;
+  height: 1em;
+  width: 1em;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -.5em;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 0;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+input[type=range]::-moz-range-thumb {
+  border: 1px solid black;
+  height: 1em;
+  width: 1em;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -.5em;
+}
+
+input[type=range]::-ms-track {
+  margin: .5em 0;
+  width: 100%;
+  height: 0;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+input[type=range]::-ms-thumb {
+  border: 1px solid black;
+  height: 1em;
+  width: 1em;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -.15em;
+}
+
+.slider-label {
+  @include font-sizes();
+}

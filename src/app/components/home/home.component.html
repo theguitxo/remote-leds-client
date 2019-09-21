@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-12 col-lg-6">
+    <leds-container [showDelayBar]="true" title="Leds selector"></leds-container>
+    <leds-options></leds-options>
+  </div>
+  <div class="col-12 col-lg-6">
+    <leds-displayer
+      (delete)="deleteStep($event)"></leds-displayer>
+  </div>
+</div>
+
+<leds-pop-up
+  *ngIf="showPopUp"
+  [type]="typePopUp"
+  [title]="titlePopUp"
+  [message]="messagePopUp"
+  (close)="closePopUp()"
+  (confirm)="executeConfirmAction()">
+</leds-pop-up>
+
+<leds-loader
+  *ngIf="showSequenceLoader"
+  [loader]="sequenceLoaderSubscription"
+  (close)="closeSequenceLoader()">
+</leds-loader>
