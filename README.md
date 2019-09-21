@@ -7,9 +7,13 @@ It's an Angular application, so, to launch, only it's necessary to execute `ng s
 
 You can read a post (in spanish) of this application in this url:
 
+https://www.guitxo.com/2019/09/21/leds-remotos-3-3/
+
 ## Español
 Esta es una aplicación para gestionar secuencias de LEDs, enviándolas a una Raspberry Pi, que tiene los LEDs conectados a la GPIO.
 
 Es una aplicación Angular, entonces, para iniciarla, sólo es necesario ejecutar `ng serve` en la línea de comandos, en el directorio de la aplicación, y navegar a la dirección http://localhost:4200.
 
 Puede leer un artículo sobre esta aplicación en esta url:
+
+https://www.guitxo.com/2019/09/21/leds-remotos-3-3/
