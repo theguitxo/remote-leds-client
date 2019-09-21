@@ -1,5 +1,5 @@
 export const SERVER: any = {
-  HOST: 'raspberry.local', // this value is defined in the hosts file of the computer that serves the app
+  HOST: '192.168.1.100',
   SCRIPTS: {
     LEDS_ON: 'onleds.php',
     LEDS_OFF: 'offleds.php'
